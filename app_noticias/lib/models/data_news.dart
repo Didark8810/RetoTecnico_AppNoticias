@@ -1,3 +1,5 @@
+import 'package:app_noticias/config/datos.dart';
+
 class DataNews {
   DataNews({
     required this.status,
@@ -42,6 +44,7 @@ class Articles {
   late final String urlToImage;
   late final String publishedAt;
   late final String? content;
+  late final String? heroId;
 
   Articles.fromJson(Map<String, dynamic> json) {
     source = Source.fromJson(json['source']);
@@ -52,6 +55,7 @@ class Articles {
     urlToImage = json['urlToImage'];
     publishedAt = json['publishedAt'];
     content = null;
+    heroId = getRandomString(15);
   }
 
   Map<String, dynamic> toJson() {

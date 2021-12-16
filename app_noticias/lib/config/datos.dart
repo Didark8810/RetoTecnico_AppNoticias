@@ -1,3 +1,5 @@
+import 'dart:math';
+
 enum CategoriaEnum { business, entertainment, general, health, science, sports, technology }
 
 String getKey() {
@@ -7,3 +9,8 @@ String getKey() {
 String getBaseUrl() {
   return "https://newsapi.org";
 }
+
+const _chars = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz1234567890';
+Random _rnd = Random();
+
+String getRandomString(int length) => String.fromCharCodes(Iterable.generate(length, (_) => _chars.codeUnitAt(_rnd.nextInt(_chars.length))));
