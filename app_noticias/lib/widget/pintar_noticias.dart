@@ -1,4 +1,3 @@
-import 'package:app_noticias/config/datos.dart';
 import 'package:app_noticias/models/data_news.dart';
 import 'package:app_noticias/pages/noticia_detalle.dart';
 import 'package:flutter/material.dart';
