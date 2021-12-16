@@ -1,4 +1,5 @@
-import 'package:app_noticias/pages/tab_business.dart';
+import 'package:app_noticias/config/datos.dart';
+import 'package:app_noticias/pages/tab_datos.dart';
 import 'package:app_noticias/providers/estados_tabs.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -20,18 +21,12 @@ class BodyMainTab extends StatelessWidget {
     final navegacionTab = Provider.of<EstadosNavTabs>(context);
     return PageView(
       controller: navegacionTab.pageController,
-      children: [
-        Container(
-          color: Colors.red,
-        ),
-        const TabBusinness(),
-        Container(
-          color: Colors.green,
-        ),
-        Container(
-          color: Colors.yellow,
-        ),
-        Container(color: Colors.orange),
+      children: const [
+        TabDatos(tipo: CategoriaEnum.business),
+        TabDatos(tipo: CategoriaEnum.entertainment),
+        TabDatos(tipo: CategoriaEnum.general),
+        TabDatos(tipo: CategoriaEnum.health),
+        TabDatos(tipo: CategoriaEnum.science),
       ],
     );
   }
