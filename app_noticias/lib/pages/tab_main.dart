@@ -1,3 +1,4 @@
+import 'package:app_noticias/pages/tab_business.dart';
 import 'package:app_noticias/providers/estados_tabs.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -23,9 +24,7 @@ class BodyMainTab extends StatelessWidget {
         Container(
           color: Colors.red,
         ),
-        Container(
-          color: Colors.blue,
-        ),
+        const TabBusinness(),
         Container(
           color: Colors.green,
         ),
